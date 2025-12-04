@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UAE National Day - School Celebration</title>
+  <style>
+    :root{
+      --red:#d62828;
+      --green:#138000;
+      --black:#000000;
+      --white:#ffffff;
+      --gap:16px;
+      --radius:12px;
+      --max-width:900px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      background:linear-gradient(180deg, #fff 0%, #fafafa 100%);
+      color:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--white);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 22px rgba(0,0,0,0.08);
+      border:6px solid transparent; /* will be wrapped by colored border */
+      position:relative;
+    }
+
+    /* Decorative outer border using pseudo elements for the 4-colors effect */
+    .card::before{
+      content:'';
+      position:absolute;
+      inset:-6px;
+      border-radius:calc(var(--radius) + 6px);
+      background:linear-gradient(90deg, var(--green) 0 25%, var(--black) 25% 50%, var(--red) 50% 75%, var(--white) 75% 100%);
+      z-index:-1;
+    }
+
+    header{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      border-bottom:6px solid var(--red);
+      padding-bottom:12px;
+      margin-bottom:16px;
+    }
+
+    .flag-icon{
+      width:72px;
+      height:48px;
+      border-radius:6px;
+      border:3px solid var(--black);
+      background: linear-gradient(180deg, var(--green) 0 25%, var(--white) 25% 50%, var(--red) 50% 75%, var(--black) 75% 100%);
+      flex-shrink:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:var(--white);
+      font-size:12px;
+    }
+
+    h1{font-size:1.35rem; margin:0}
+    p.lead{margin:8px 0 0 0; color:#333}
+
+    .content{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+
+    .story{
+      padding:14px;
+      border-radius:10px;
+      border:3px solid var(--green);
+      background:linear-gradient(180deg, rgba(19,128,0,0.03), rgba(0,0,0,0.02));
+    }
+
+    .highlights{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .pill{
+      padding:8px 12px;
+      border-radius:999px;
+      border:2px solid var(--red);
+      background:var(--white);
+      font-weight:600;
+      font-size:0.9rem;
+    }
+
+    .image-wrap{
+      width:100%;
+      min-height:160px;
+      border-radius:10px;
+      border:3px solid var(--black);
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(90deg, rgba(214,40,40,0.06), rgba(19,128,0,0.05));
+    }
+
+    .image-wrap img{width:100%; height:auto; display:block}
+
+    footer{
+      margin-top:14px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      border-top:3px dashed var(--black);
+      padding-top:12px;
+    }
+
+    .meta{font-size:0.9rem; color:#444}
+
+    /* Responsive */
+    @media(min-width:720px){
+      .content{grid-template-columns: 1fr 340px}
+      .image-wrap{min-height:220px}
+    }
+
+  </style>
+</head>
+<body>
+  <article class="card" aria-labelledby="title">
+    <header>
+      
+      <div>
+        <h1 id="title">UAE National Day — School Celebration</h1>
+        <p class="lead">A joyful school celebration that brought students together to honour the UAE.</p>
+      </div>
+    </header>
+
+    <section class="content">
+      <div>
+        <div class="story" role="article">
+          <p>Keilah, Elle, Jhodie, and Caira spent UAE National Day at school enjoying the celebrations together. They visited different booths, tried fun activities, and watched students perform vibrant traditional dances. What made the day even more special was seeing students from many different cultures celebrating the UAE with pride — it was inspiring to watch everyone come together as one community.</p>
+
+          <p>The day was also meaningful because they learned about the history, culture, and values of the UAE, gaining a deeper appreciation for the country and its traditions. The four friends enjoyed the music, the colours, and the joyful atmosphere, making it one of their most memorable school days.</p>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+          <span class="pill">Unity</span>
+          <span class="pill">Culture</span>
+          <span class="pill">Friendship</span>
+          <span class="pill">Pride</span>
+        </div>
+      </div>
+
+      <aside>
+        <div style="padding:10px; border-radius:8px; border:3px solid var(--black); background:var(--white); margin-top:12px;">
+          <strong>What is UAE National Day?</strong>
+          <p class="meta" style="margin:6px 0 0 0">UAE National Day, celebrated every December 2, marks the unification of the seven emirates in 1971. It honors the nation’s heritage, unity, and achievements, bringing people of all cultures together in celebration.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div class="meta">Designed for a school celebration — editable and printable.</div>
+      <div style="font-size:0.9rem;">&copy; UAE National Day</div>
+    </footer>
+  </article>
+</body>
+</html>
